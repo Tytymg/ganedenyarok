@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>גן עדן ירוק | צור קשר</title>
+    <meta name="description" content="יצירת קשר עם גן עדן ירוק: שאלות על צמחים, הזמנות והצעות" />
+    <meta name="keywords" content="צור קשר, שאלות על צמחים, הזמנת צמחים, גן עדן ירוק" />
+    <meta name="author" content="יובל יוסף, ציון מגנזי" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="icon" type="image/png" href="images/site/favicon.png" />
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+
+        <!-- פתיח האתר: לוגו ומשפט פתיחה -->
+        <header>
+            <a href="index.html" class="logo"><img src="images/site/logo.png" alt="" /> גן עדן ירוק</a>
+            <p class="slogan">הבית שלכם לעולם הצומח והירוק</p>
+        </header>
+
+        <!-- תפריט ניווט ראשי -->
+        <nav class="mainMenu" aria-label="תפריט ראשי">
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="catalog.html">קטלוג צמחים</a>
+                    <ul>
+                        <li><a href="catalog.html#brightLight">צמחים לחדר מואר</a></li>
+                        <li><a href="catalog.html#mediumLight">צמחים לאור בינוני</a></li>
+                        <li><a href="catalog.html#lowLight">צמחים לחדר מוצל</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">עציצים ותוספות</a></li>
+                    </ul>
+                </li>
+                <li><a href="choosePlant.html">מצא את הצמח שלך</a></li>
+                <li><a href="#" class="inactive" title="העמוד בבנייה">מדריכי טיפוח</a>
+                    <ul>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">השקיה נכונה</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">העברת צמח לעציץ גדול יותר</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">מזיקים נפוצים</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="inactive" title="העמוד בבנייה">שאלות נפוצות</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="contactUs.html" class="current">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת האתר</a></li>
+            </ul>
+        </nav>
+
+        <!-- תפריט פירורי לחם -->
+        <nav class="breadcrumbs" aria-label="פירורי לחם">
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li>צור קשר</li>
+            </ul>
+        </nav>
+
+        <div class="pageBody">
+            <main>
+                <h1>צור קשר</h1>
+                <p>יש לכם שאלה על צמח, על הזמנה או הצעה לשיפור האתר? מלאו את הטופס ונחזור אליכם.</p>
+                <p>שדות המסומנים ב-<span class="required">* (חובה)</span> הם שדות חובה.</p>
+
+                <form class="contactForm" action="#" method="get">
+
+                    <div class="field">
+                        <label for="fullName" class="title">שם מלא: <span class="required">* (חובה)</span></label>
+                        <input type="text" id="fullName" name="fullName" class="textField" placeholder="לדוגמה: ישראל ישראלי" required="required" />
+                    </div>
+
+                    <div class="field">
+                        <label for="email" class="title">כתובת אימייל: <span class="required">* (חובה)</span></label>
+                        <input type="email" id="email" name="email" class="textField" placeholder="name@example.com" required="required" />
+                    </div>
+
+                    <div class="field">
+                        <label for="phone" class="title">מספר טלפון:</label>
+                        <input type="tel" id="phone" name="phone" class="textField" placeholder="לדוגמה: 0501234567" pattern="0[0-9]{8,9}" title="מספר טלפון בן 9 או 10 ספרות, שמתחיל ב-0" />
+                    </div>
+
+                    <div class="field">
+                        <label for="subject" class="title">נושא הפנייה: <span class="required">* (חובה)</span></label>
+                        <select id="subject" name="subject" required="required">
+                            <option value="">בחרו נושא</option>
+                            <option value="plantQuestion">שאלה על צמח</option>
+                            <option value="order">הזמנה קיימת</option>
+                            <option value="suggestion">הצעה לשיפור האתר</option>
+                            <option value="other">אחר</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="plantsCount" class="title">כמה צמחים יש לכם בבית?</label>
+                        <input type="number" id="plantsCount" name="plantsCount" class="textField" min="0" max="100" placeholder="מספר בין 0 ל-100" />
+                    </div>
+
+                    <fieldset>
+                        <legend>איך נוח לכם שנחזור אליכם? <span class="required">* (חובה)</span></legend>
+                        <label><input type="radio" name="contactBy" value="email" required="required" /> באימייל</label>
+                        <label><input type="radio" name="contactBy" value="phone" /> בטלפון</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>על מה תרצו לקבל עדכונים?</legend>
+                        <label><input type="checkbox" name="updates" value="newPlants" /> צמחים חדשים</label>
+                        <label><input type="checkbox" name="updates" value="careTips" /> טיפים לטיפוח</label>
+                        <label><input type="checkbox" name="updates" value="sales" /> מבצעים</label>
+                    </fieldset>
+
+                    <div class="field">
+                        <label for="message" class="title">תוכן הפנייה: <span class="required">* (חובה)</span></label>
+                        <textarea id="message" name="message" placeholder="כתבו כאן את השאלה או ההודעה" required="required"></textarea>
+                    </div>
+
+                    <input type="submit" class="submitButton" value="שליחה" />
+                </form>
+            </main>
+
+            <!-- תוכן נלווה -->
+            <aside>
+                <h2>זמני מענה</h2>
+                <p>אנחנו עונים לפניות בימים א' עד ה', בדרך כלל תוך יום עבודה אחד.</p>
+                <h2>לפני שכותבים</h2>
+                <p>ייתכן שהתשובה כבר נמצאת ב<a href="catalog.html">קטלוג הצמחים</a>, שם מופיעים הגודל ותדירות ההשקיה של כל צמח.</p>
+            </aside>
+        </div>
+
+        <!-- סיום האתר -->
+        <footer>
+            <p>&copy; 2026 גן עדן ירוק. כל הזכויות שמורות.</p>
+            <p><a href="siteMap.html">מפת האתר</a> | <a href="contactUs.html">צור קשר</a> | <a href="about.html">אודות</a></p>
+            <p>פותח במסגרת הקורס "פיתוח אתרי אינטרנט", HIT מכון טכנולוגי חולון</p>
+        </footer>
+
+    </div>
+</body>
+</html>

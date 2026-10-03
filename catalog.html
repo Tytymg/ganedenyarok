@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>גן עדן ירוק | קטלוג צמחים</title>
+    <meta name="description" content="קטלוג צמחי הבית של גן עדן ירוק: גודל, השקיה והתאמה לתנאי האור בחדר" />
+    <meta name="keywords" content="קטלוג צמחים, צמחי בית, צמחים לחדר מואר, צמחים לחדר מוצל, השקיה" />
+    <meta name="author" content="יובל יוסף, ציון מגנזי" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="icon" type="image/png" href="images/site/favicon.png" />
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+
+        <!-- פתיח האתר: לוגו ומשפט פתיחה -->
+        <header>
+            <a href="index.html" class="logo"><img src="images/site/logo.png" alt="" /> גן עדן ירוק</a>
+            <p class="slogan">הבית שלכם לעולם הצומח והירוק</p>
+        </header>
+
+        <!-- תפריט ניווט ראשי -->
+        <nav class="mainMenu" aria-label="תפריט ראשי">
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="catalog.html" class="current">קטלוג צמחים</a>
+                    <ul>
+                        <li><a href="catalog.html#brightLight">צמחים לחדר מואר</a></li>
+                        <li><a href="catalog.html#mediumLight">צמחים לאור בינוני</a></li>
+                        <li><a href="catalog.html#lowLight">צמחים לחדר מוצל</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">עציצים ותוספות</a></li>
+                    </ul>
+                </li>
+                <li><a href="choosePlant.html">מצא את הצמח שלך</a></li>
+                <li><a href="#" class="inactive" title="העמוד בבנייה">מדריכי טיפוח</a>
+                    <ul>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">השקיה נכונה</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">העברת צמח לעציץ גדול יותר</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">מזיקים נפוצים</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="inactive" title="העמוד בבנייה">שאלות נפוצות</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="contactUs.html">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת האתר</a></li>
+            </ul>
+        </nav>
+
+        <!-- תפריט פירורי לחם -->
+        <nav class="breadcrumbs" aria-label="פירורי לחם">
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li>קטלוג צמחים</li>
+            </ul>
+        </nav>
+
+        <div class="pageBody">
+            <main>
+                <h1>קטלוג צמחים</h1>
+                <p>בקטלוג מופיעים הצמחים שאנחנו ממליצים עליהם, מחולקים לפי כמות האור בחדר. לכל צמח מופיעים הגודל, תדירות ההשקיה ומה מיוחד בו.</p>
+                <p>קפיצה ישירה לקבוצה: <a href="#brightLight">חדר מואר</a> | <a href="#mediumLight">אור בינוני</a> | <a href="#lowLight">חדר מוצל</a></p>
+
+                <table class="catalog">
+                    <caption>טבלת צמחי הבית לפי כמות האור בחדר</caption>
+                    <tr>
+                        <th>תמונה</th>
+                        <th>שם הצמח</th>
+                        <th>גודל</th>
+                        <th>השקיה</th>
+                        <th>מה מיוחד בו</th>
+                    </tr>
+                    <tr>
+                        <th colspan="5" class="groupTitle" id="brightLight">צמחים לחדר מואר</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/01-succulent.png" alt="סוקולנט קטן בעציץ לבן" /></td>
+                        <td><strong>סוקולנט</strong></td>
+                        <td>קטן</td>
+                        <td>מעט מאוד, רק כשהאדמה יבשה לגמרי</td>
+                        <td>אוגר מים ברקמות העבות שלו</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/03-haworthia.png" alt="הוורתיה קטנה עם עלים מחודדים ומנוקדים" /></td>
+                        <td><strong>הוורתיה</strong></td>
+                        <td>קטן</td>
+                        <td>מעט, כשהאדמה יבשה</td>
+                        <td>סוקולנט קטן שמסתדר גם עם אור עקיף</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/02-aloe-vera.png" alt="אלוורה בעציץ, עם עלים עבים ומחודדים" /></td>
+                        <td><strong>אלוורה</strong></td>
+                        <td>בינוני</td>
+                        <td>מעט מאוד, רק כשהאדמה יבשה לגמרי</td>
+                        <td>עלים בשרניים שאוגרים מים</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/05-ficus-ginseng.png" alt="פיקוס ג'ינסנג עם גזע עבה ועלים קטנים" /></td>
+                        <td><strong>פיקוס ג'ינסנג</strong></td>
+                        <td>בינוני</td>
+                        <td>כשהשכבה העליונה של האדמה יבשה</td>
+                        <td>גזע עבה ומעוצב, אוהב אור רב</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/04-jade-plant-crassula.png" alt="עץ הכסף עם עלים עגולים ובשרניים" /></td>
+                        <td><strong>עץ הכסף (קרסולה)</strong></td>
+                        <td>גדול</td>
+                        <td>מעט, כשהאדמה יבשה</td>
+                        <td>סוקולנט שיכול לגדול לגודל של שיח</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/07-bird-of-paradise.png" alt="סטרליציה גדולה עם עלים רחבים ופרחים כתומים" /></td>
+                        <td><strong>סטרליציה (ציפור גן עדן)</strong></td>
+                        <td>גדול</td>
+                        <td>באופן סדיר, כשהאדמה מתחילה להתייבש</td>
+                        <td>עלים גדולים, זקוק להרבה אור</td>
+                    </tr>
+                    <tr>
+                        <th colspan="5" class="groupTitle" id="mediumLight">צמחים לאור בינוני</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/08-dwarf-snake-plant.png" alt="סנסיווירה ננסית עם עלים קצרים וזקופים" /></td>
+                        <td><strong>סנסיווירה ננסית</strong></td>
+                        <td>קטן</td>
+                        <td>מעט, כשהאדמה יבשה</td>
+                        <td>עמידה מאוד ודורשת מעט טיפול</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/09-peperomia.png" alt="פפרומיה עם עלים עגולים ומבריקים" /></td>
+                        <td><strong>פפרומיה</strong></td>
+                        <td>בינוני</td>
+                        <td>כשהאדמה יבשה למחצה</td>
+                        <td>צמח קומפקטי עם עלים עבים</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/13-monstera-deliciosa.png" alt="מונסטרה עם עלים גדולים ומחורצים" /></td>
+                        <td><strong>מונסטרה דליציוזה</strong></td>
+                        <td>גדול</td>
+                        <td>כשהשכבה העליונה של האדמה יבשה</td>
+                        <td>עלים גדולים ומחורצים, צמח מרשים</td>
+                    </tr>
+                    <tr>
+                        <th colspan="5" class="groupTitle" id="lowLight">צמחים לחדר מוצל</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/14-snake-plant.png" alt="צמח הנחש עם עלים ארוכים וזקופים" /></td>
+                        <td><strong>צמח הנחש</strong></td>
+                        <td>קטן</td>
+                        <td>מעט, כשהאדמה יבשה לגמרי</td>
+                        <td>מסתדר גם עם מעט מאוד אור</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/17-peace-lily.png" alt="שושנת השלום עם עלים כהים ופרחים לבנים" /></td>
+                        <td><strong>שושנת השלום</strong></td>
+                        <td>בינוני</td>
+                        <td>באופן סדיר, אדמה לחה אך לא רטובה</td>
+                        <td>העלים נובלים כשהוא צמא ומתאוששים אחרי השקיה</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/plants/19-parlor-palm.png" alt="דקל חמד עם עלים דקים ומנוצים" /></td>
+                        <td><strong>דקל חמד</strong></td>
+                        <td>גדול</td>
+                        <td>כשהשכבה העליונה של האדמה יבשה</td>
+                        <td>דקל ביתי שמסתדר עם אור מועט</td>
+                    </tr>
+                </table>
+            </main>
+
+            <!-- תוכן נלווה -->
+            <aside>
+                <h2>איך יודעים כמה אור יש בחדר?</h2>
+                <p><strong>חדר מואר:</strong> החלון גדול ופונה לשמש, ויש אור חזק רוב שעות היום.</p>
+                <p><strong>אור בינוני:</strong> יש אור יום טוב, אבל השמש לא נכנסת ישירות לחדר.</p>
+                <p><strong>חדר מוצל:</strong> החלון קטן או רחוק, או שהוא פונה לקיר או לבניין קרוב.</p>
+                <p>עדיין מתלבטים? <a href="choosePlant.html">מצאו את הצמח שלכם</a>.</p>
+            </aside>
+        </div>
+
+        <!-- סיום האתר -->
+        <footer>
+            <p>&copy; 2026 גן עדן ירוק. כל הזכויות שמורות.</p>
+            <p><a href="siteMap.html">מפת האתר</a> | <a href="contactUs.html">צור קשר</a> | <a href="about.html">אודות</a></p>
+            <p>פותח במסגרת הקורס "פיתוח אתרי אינטרנט", HIT מכון טכנולוגי חולון</p>
+        </footer>
+
+    </div>
+</body>
+</html>

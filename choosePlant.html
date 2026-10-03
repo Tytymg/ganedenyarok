@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>גן עדן ירוק | מצא את הצמח שלך</title>
+    <meta name="description" content="טופס אינטראקטיבי שמתאים לכם צמח בית לפי כמות האור בחדר, הגודל הרצוי ותדירות ההשקיה" />
+    <meta name="keywords" content="בחירת צמח, התאמת צמח, צמחי בית, הזמנת צמח" />
+    <meta name="author" content="יובל יוסף, ציון מגנזי" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="icon" type="image/png" href="images/site/favicon.png" />
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <!-- Scripts -->
+    <script src="jScripts/choosePlant.js" type="text/javascript"></script>
+</head>
+<body onload="updateForm()">
+    <div id="container">
+
+        <!-- פתיח האתר: לוגו ומשפט פתיחה -->
+        <header>
+            <a href="index.html" class="logo"><img src="images/site/logo.png" alt="" /> גן עדן ירוק</a>
+            <p class="slogan">הבית שלכם לעולם הצומח והירוק</p>
+        </header>
+
+        <!-- תפריט ניווט ראשי -->
+        <nav class="mainMenu" aria-label="תפריט ראשי">
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="catalog.html">קטלוג צמחים</a>
+                    <ul>
+                        <li><a href="catalog.html#brightLight">צמחים לחדר מואר</a></li>
+                        <li><a href="catalog.html#mediumLight">צמחים לאור בינוני</a></li>
+                        <li><a href="catalog.html#lowLight">צמחים לחדר מוצל</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">עציצים ותוספות</a></li>
+                    </ul>
+                </li>
+                <li><a href="choosePlant.html" class="current">מצא את הצמח שלך</a></li>
+                <li><a href="#" class="inactive" title="העמוד בבנייה">מדריכי טיפוח</a>
+                    <ul>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">השקיה נכונה</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">העברת צמח לעציץ גדול יותר</a></li>
+                        <li><a href="#" class="inactive" title="העמוד בבנייה">מזיקים נפוצים</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="inactive" title="העמוד בבנייה">שאלות נפוצות</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="contactUs.html">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת האתר</a></li>
+            </ul>
+        </nav>
+
+        <!-- תפריט פירורי לחם -->
+        <nav class="breadcrumbs" aria-label="פירורי לחם">
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li>מצא את הצמח שלך</li>
+            </ul>
+        </nav>
+
+        <div class="pageBody fullWidth">
+            <main>
+                <h1>מצא את הצמח שלך</h1>
+                <p>ענו על שלוש השאלות, והצמח המתאים לכם יופיע מיד בצד שמאל. אפשר להוסיף להזמנה תוספות, למלא שם ולשלוח.</p>
+
+                <div class="plantCard">
+
+                    <!-- צד ימין: כל הפקדים, וכפתור ההזמנה מתחתיהם -->
+                    <div class="plantControls">
+
+                        <!-- סט כפתורי רדיו 1: אור בחדר -->
+                        <fieldset class="box">
+                            <legend>כמה אור יש בחדר? <span class="required">*</span></legend>
+                            <div class="boxContent">
+                                <label><input type="radio" name="light" class="lightOpt" value="הרבה" onclick="updateForm()" /> הרבה</label>
+                                <label><input type="radio" name="light" class="lightOpt" value="בינוני" onclick="updateForm()" /> בינוני</label>
+                                <label><input type="radio" name="light" class="lightOpt" value="מעט" onclick="updateForm()" /> מעט</label>
+                            </div>
+                        </fieldset>
+
+                        <!-- סט כפתורי רדיו 2: גודל הצמח -->
+                        <fieldset class="box">
+                            <legend>מה גודל הצמח? <span class="required">*</span></legend>
+                            <div class="boxContent">
+                                <label><input type="radio" name="size" class="sizeOpt" value="קטן" onclick="updateForm()" /> קטן</label>
+                                <label><input type="radio" name="size" class="sizeOpt" value="בינוני" onclick="updateForm()" /> בינוני</label>
+                                <label><input type="radio" name="size" class="sizeOpt" value="גדול" onclick="updateForm()" /> גדול</label>
+                            </div>
+                        </fieldset>
+
+                        <!-- סט כפתורי רדיו 3: השקיה -->
+                        <fieldset class="box">
+                            <legend>כמה פעמים בשבוע תרצו להשקות? <span class="required">*</span></legend>
+                            <div class="boxContent">
+                                <label><input type="radio" name="water" class="waterOpt" value="כמעט לא" onclick="updateForm()" /> כמעט לא</label>
+                                <label><input type="radio" name="water" class="waterOpt" value="1-2 פעמים" onclick="updateForm()" /> 1-2 פעמים</label>
+                                <label><input type="radio" name="water" class="waterOpt" value="לא אכפת לי" onclick="updateForm()" /> לא אכפת לי</label>
+                            </div>
+                        </fieldset>
+
+                        <!-- סט Checkbox: תוספות להזמנה (הסדר כאן זהה לסדר התמונות בתיבת התצוגה) -->
+                        <fieldset class="box">
+                            <legend>תוספות להזמנה</legend>
+                            <div class="boxContent">
+                                <label><input type="checkbox" class="extraOpt" value="אדנית" onclick="updateForm()" /> אדנית</label>
+                                <label><input type="checkbox" class="extraOpt" value="אדמת שתילה" onclick="updateForm()" /> אדמת שתילה</label>
+                                <label><input type="checkbox" class="extraOpt" value="דשן" onclick="updateForm()" /> דשן</label>
+                                <label><input type="checkbox" class="extraOpt" value="צלחת לעציץ" onclick="updateForm()" /> צלחת לעציץ</label>
+                            </div>
+                        </fieldset>
+
+                        <!-- תיבות טקסט: פרטים נוספים -->
+                        <fieldset class="box wide">
+                            <legend>פרטים נוספים</legend>
+                            <div class="boxContent">
+                                <label for="fullName">שם מלא: <span class="required">* (חובה)</span></label>
+                                <input type="text" id="fullName" class="textField" oninput="updateForm()" />
+
+                                <label for="address">כתובת למשלוח:</label>
+                                <input type="text" id="address" class="textField" />
+                            </div>
+                        </fieldset>
+
+                        <!-- אזור ההזמנה: תמונת הדוכן וכפתור האישור, מתחת לכל הפקדים -->
+                        <div class="checkout">
+                            <img src="images/site/plant-stand.png" alt="" />
+                            <input type="button" id="submitBtn" class="orderButton" value="שלח להזמנה" onclick="sendOrder()" disabled="disabled" />
+                            <p class="hint">* שדות חובה להפעלת כפתור ההזמנה</p>
+                        </div>
+                    </div>
+
+                    <!-- צד שמאל: תצוגת הצמח והתוספות -->
+                    <div class="plantDisplay">
+                        <div class="plantBox">
+                            <!-- במצב התחלתי מוצגת תמונת המדפים הכללית -->
+                            <div id="defaultShelvesView">
+                                <img src="images/site/plant-shelves.png" alt="מדף עץ ועליו עציצים עם צמחי בית" />
+                                <p class="hint">ענו על שאלות האור, הגודל וההשקיה כדי לגלות את הצמח שלכם</p>
+                            </div>
+
+                            <!-- אחרי בחירה בשלושת סטי הרדיו מוצגת תמונת הצמח המתאים -->
+                            <div id="plantResultContainer">
+                                <h2 id="plantTitle">הצמח שלך הוא:</h2>
+                                <img id="plantImg" src="images/plants/01-succulent.png" alt="תמונת הצמח המותאם" />
+                            </div>
+                        </div>
+
+                        <!-- תמונות התוספות: שקיפות חלקית, מודגשות כשהתיבה מסומנת -->
+                        <div class="extrasBox">
+                            <h2>תוספות</h2>
+                            <figure><img class="extraImg" src="images/addons/rectangular-planter.png" alt="אדנית מלבנית" /><figcaption>אדנית</figcaption></figure>
+                            <figure><img class="extraImg" src="images/addons/premium-potting-soil.png" alt="שק אדמת שתילה" /><figcaption>אדמת שתילה</figcaption></figure>
+                            <figure><img class="extraImg" src="images/addons/fertilizer.png" alt="צנצנת דשן" /><figcaption>דשן</figcaption></figure>
+                            <figure><img class="extraImg" src="images/addons/plant-pot-saucer.png" alt="צלחת לעציץ" /><figcaption>צלחת לעציץ</figcaption></figure>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- חלון סיכום הזמנה, מוסתר עד הלחיצה על כפתור האישור -->
+                <div id="summaryModal">
+                    <div class="modalContent">
+                        <h2>ההזמנה התקבלה!</h2>
+                        <div id="summaryText"></div>
+                        <input type="button" class="orderButton" value="סגור" onclick="closeSummary()" />
+                    </div>
+                </div>
+            </main>
+
+            <!-- תוכן נלווה -->
+            <aside>
+                <h2>טיפ מקצועי</h2>
+                <p>בחירת צמח שמתאים לתנאי האור בחדר היא הצעד החשוב ביותר לצמח בריא לאורך זמן. לפרטים על כל צמח, ראו את <a href="catalog.html">קטלוג הצמחים</a>.</p>
+            </aside>
+        </div>
+
+        <!-- סיום האתר -->
+        <footer>
+            <p>&copy; 2026 גן עדן ירוק. כל הזכויות שמורות.</p>
+            <p><a href="siteMap.html">מפת האתר</a> | <a href="contactUs.html">צור קשר</a> | <a href="about.html">אודות</a></p>
+            <p>פותח במסגרת הקורס "פיתוח אתרי אינטרנט", HIT מכון טכנולוגי חולון</p>
+        </footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,736 @@
+/* =========================================================
+   גן עדן ירוק: קובץ העיצוב של כל עמודי האתר
+   ========================================================= */
+
+/* הטמעת פונט מ-Google Fonts (לפני הגדרות ה-body) */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap');
+
+
+/* ---------- הגדרות כלליות ---------- */
+
+body {
+    direction: rtl;
+    background-color: #f4f1ea;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+/* קובץ ה-reset מגדיר Arial לכל התגיות, ולכן מגדירים כאן את הפונט של האתר מחדש */
+body, h1, h2, h3, p, a, span, strong, ul, ol, li, table, caption, th, td,
+form, fieldset, legend, label, input, select, textarea, figure, figcaption {
+    font-family: Assistant, Arial, sans-serif;
+}
+
+/* הקונטיינר: רוחב קבוע וממורכז בכל רזולוציה */
+#container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #2d5a27;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d5a27;
+    margin: 25px 0 10px 0;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #3b7a32;
+    margin: 15px 0 5px 0;
+}
+
+p {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+main ul, main ol {
+    margin: 0 25px 15px 0;
+    font-size: 17px;
+}
+
+main ul {
+    list-style-type: square;
+}
+
+a {
+    color: #2d5a27;
+    font-weight: 600;
+}
+
+/* סדר האינטראקציות לקישורים: visited, hover, active */
+a:visited {
+    color: #5a4a2d;
+}
+
+a:hover {
+    color: #3b7a32;
+    text-decoration: none;
+}
+
+a:active {
+    color: #1a3a16;
+}
+
+/* קישור לעמוד שלא פותח: צבע אפור וסמן "לא זמין" (לא בתפריט הראשי) */
+a.inactive, a.inactive:visited, a.inactive:hover {
+    color: #8a8a8a;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+/* ---------- פתיח האתר (header) ---------- */
+
+#container > header {
+    background-color: #2d5a27;
+    padding: 18px 30px;
+    border-bottom: 5px solid #3b7a32;
+}
+
+/* הלוגו: תמונה + טקסט חי (בעמוד הבית בתוך h1) */
+header .logo {
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 800;
+    text-decoration: none;
+    margin: 0;
+}
+
+header .logo a, header a.logo {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header .logo img {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-left: 12px;
+}
+
+header .slogan {
+    color: #e9e4d9;
+    font-size: 18px;
+    margin: 0 75px 0 0;
+}
+
+
+/* ---------- תפריט ניווט ראשי ---------- */
+
+nav.mainMenu {
+    background-color: #e9e4d9;
+    border-bottom: 2px solid #2d5a27;
+    height: 50px;
+}
+
+/* תפריט אופקי: כל פריט "צף" לימין */
+nav.mainMenu > ul > li {
+    float: right;
+    position: relative;
+}
+
+nav.mainMenu > ul > li > a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 18px;
+    color: #2d5a27;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav.mainMenu > ul > li > a:hover {
+    background-color: #2d5a27;
+    color: #ffffff;
+}
+
+/* העמוד הנוכחי: רקע כהה וגם קו תחתון, כדי לא להסתמך על צבע בלבד */
+nav.mainMenu > ul > li > a.current {
+    background-color: #2d5a27;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* תת תפריט: מוסתר בטעינה ומוצג רק במעבר עכבר על הפריט */
+nav.mainMenu li ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    background-color: #ffffff;
+    border: 2px solid #2d5a27;
+    z-index: 5;
+}
+
+nav.mainMenu li:hover ul {
+    display: block;
+}
+
+nav.mainMenu li ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #2d5a27;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav.mainMenu li ul li a:hover {
+    background-color: #e9e4d9;
+}
+
+/* עמודים שלא פותחו בתפריט הראשי: אותו צבע כמו שאר הפריטים (לפי ההנחיה לא צובעים באפור בתפריט הראשי),
+   אבל בלי שינוי במעבר עכבר ועם סמן "לא זמין" */
+nav.mainMenu > ul > li > a.inactive,
+nav.mainMenu > ul > li > a.inactive:hover {
+    background-color: #e9e4d9;
+    color: #2d5a27;
+    cursor: not-allowed;
+}
+
+nav.mainMenu li ul li a.inactive,
+nav.mainMenu li ul li a.inactive:hover {
+    background-color: #ffffff;
+    color: #2d5a27;
+    cursor: not-allowed;
+}
+
+
+/* ---------- פירורי לחם ---------- */
+
+nav.breadcrumbs {
+    padding: 10px 30px;
+    background-color: #f4f1ea;
+    font-size: 15px;
+}
+
+nav.breadcrumbs li {
+    display: inline;
+}
+
+/* הוספת התו המפריד אחרי כל פריט, בלי לפגוע במשמעות הסמנטית של הרשימה */
+nav.breadcrumbs li:after {
+    content: " / ";
+    color: #8a8a8a;
+}
+
+/* אחרי הפריט האחרון (העמוד הנוכחי) אין מפריד */
+nav.breadcrumbs li:last-child:after {
+    content: "";
+}
+
+
+/* ---------- תוכן ראשי ותוכן נלווה ---------- */
+
+/* עמוד עם תוכן נלווה: התוכן מימין והתוכן הנלווה משמאל */
+div.pageBody {
+    padding: 25px 30px 30px 30px;
+}
+
+div.pageBody > main {
+    float: right;
+    width: 800px;
+}
+
+div.pageBody > aside {
+    float: left;
+    width: 290px;
+}
+
+/* עמוד ללא עמודות: התוכן תופס את כל הרוחב */
+div.pageBody.fullWidth > main,
+div.pageBody.fullWidth > aside {
+    float: none;
+    width: auto;
+}
+
+aside {
+    background-color: #e9e4d9;
+    border-right: 5px solid #3b7a32;
+    padding: 18px 20px;
+}
+
+div.pageBody.fullWidth > aside {
+    margin-top: 25px;
+}
+
+aside h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+aside p {
+    font-size: 16px;
+}
+
+/* ניקוי ה-float בתוך אזור התוכן, כדי שהריפוד התחתון יישמר לפני הסיום */
+div.pageBody:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* ---------- סיום האתר (footer) ---------- */
+
+#container > footer {
+    background-color: #2d5a27;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+footer a, footer a:visited {
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #e9e4d9;
+}
+
+
+/* ---------- דף הבית ---------- */
+
+section.intro {
+    background-color: #f4f1ea;
+    border: 2px solid #2d5a27;
+    padding: 20px 25px;
+    height: 330px;
+}
+
+section.intro img {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* האות הראשונה בפסקת הפתיחה */
+section.intro p.lead:first-letter {
+    font-size: 30px;
+    font-weight: 800;
+    color: #2d5a27;
+}
+
+/* קישור שמעוצב ככפתור */
+a.button, a.button:visited {
+    display: inline-block;
+    background-color: #2d5a27;
+    color: #ffffff;
+    padding: 10px 26px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+a.button:hover {
+    background-color: #3b7a32;
+    color: #ffffff;
+}
+
+/* כרטיסי צמחים מומלצים: זה לצד זה */
+div.featured figure {
+    display: inline-block;
+    width: 220px;
+    margin: 0 0 15px 16px;
+    vertical-align: top;
+    text-align: center;
+    border: 2px solid #e9e4d9;
+    padding: 10px;
+}
+
+div.featured figure:last-child {
+    margin-left: 0;
+}
+
+div.featured img {
+    width: 100%;
+    height: auto;
+}
+
+div.featured figcaption {
+    font-size: 16px;
+}
+
+div.featured figcaption strong {
+    display: block;
+    font-size: 19px;
+    color: #2d5a27;
+}
+
+
+/* ---------- קטלוג הצמחים (טבלה) ---------- */
+
+table.catalog {
+    width: 100%;
+    border: 2px solid #2d5a27;
+    margin-bottom: 20px;
+}
+
+table.catalog caption {
+    text-align: right;
+    font-size: 16px;
+    padding-bottom: 6px;
+    color: #555555;
+}
+
+table.catalog th, table.catalog td {
+    border: 1px solid #c9c2b2;
+    padding: 8px 10px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+table.catalog th {
+    background-color: #2d5a27;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* שורת כותרת של קבוצה (תא ממוזג) */
+table.catalog th.groupTitle {
+    background-color: #3b7a32;
+    font-size: 18px;
+}
+
+/* שורות זוגיות בצבע רקע שונה, לקריאות */
+table.catalog tr:nth-child(even) td {
+    background-color: #f4f1ea;
+}
+
+table.catalog td img {
+    width: 70px;
+    height: 70px;
+}
+
+
+/* ---------- טפסים (צור קשר) ---------- */
+
+form.contactForm {
+    background-color: #f4f1ea;
+    border: 2px solid #2d5a27;
+    padding: 20px 25px;
+}
+
+form.contactForm div.field {
+    margin-bottom: 14px;
+}
+
+form.contactForm label.title, form.contactForm legend {
+    display: block;
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+form.contactForm input.textField, form.contactForm select, form.contactForm textarea {
+    width: 420px;
+    padding: 7px;
+    border: 1px solid #9a9a9a;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+form.contactForm textarea {
+    height: 110px;
+}
+
+form.contactForm fieldset {
+    border: 1px solid #c9c2b2;
+    padding: 8px 15px;
+    margin-bottom: 14px;
+}
+
+form.contactForm fieldset label {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+/* סימון שדה חובה: כוכבית וגם המילה "חובה", לא רק צבע */
+span.required {
+    color: #a3261d;
+    font-weight: 700;
+}
+
+form.contactForm input.submitButton {
+    background-color: #2d5a27;
+    color: #ffffff;
+    border: 0;
+    padding: 10px 34px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form.contactForm input.submitButton:hover {
+    background-color: #3b7a32;
+}
+
+
+/* ---------- מפת האתר ---------- */
+
+/* רשימה היררכית: כל רמה מוזזת פנימה ובעלת תבליט שונה */
+div.siteMap > ul {
+    list-style-type: none;
+    margin-right: 0;
+}
+
+div.siteMap > ul > li {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+div.siteMap ul ul {
+    list-style-type: disc;
+    margin: 4px 30px 8px 0;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+div.siteMap ul ul ul {
+    list-style-type: circle;
+}
+
+
+/* =========================================================
+   עמוד "מצא את הצמח שלך" (טופס אינטראקטיבי)
+   ========================================================= */
+
+div.plantCard {
+    background-color: #f7f4ec;
+    border: 4px solid #2d5a27;
+    padding: 25px;
+}
+
+/* ניקוי ה-float בתוך הכרטיס */
+div.plantCard:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* צד ימין: הפקדים */
+div.plantControls {
+    float: right;
+    width: 760px;
+}
+
+/* צד שמאל: תצוגת הצמח והתוספות */
+div.plantDisplay {
+    float: left;
+    width: 310px;
+}
+
+/* תיבות הפקדים הירוקות: זו לצד זו */
+fieldset.box {
+    display: inline-block;
+    vertical-align: top;
+    width: 232px;
+    margin: 0 0 16px 12px;
+    background-color: #ffffff;
+    border: 2px solid #2d5a27;
+}
+
+fieldset.box.wide {
+    width: 482px;
+}
+
+/* רוחב פס הכותרת = רוחב התיבה פחות הריפוד שלו */
+fieldset.box.wide legend {
+    width: 458px;
+}
+
+/* float גורם ל-legend להתנהג כמו פס כותרת רגיל בראש התיבה */
+fieldset.box legend {
+    float: right;
+    width: 208px;
+    background-color: #2d5a27;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+fieldset.box div.boxContent {
+    clear: both;
+    padding: 12px 15px;
+}
+
+fieldset.box div.boxContent label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+fieldset.box div.boxContent input.textField {
+    width: 440px;
+    padding: 6px;
+    border: 1px solid #9a9a9a;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* אזור ההזמנה: מתחת לכל הפקדים וממורכז */
+div.checkout {
+    text-align: center;
+    padding-top: 5px;
+}
+
+div.checkout img {
+    display: block;
+    height: 110px;
+    width: auto;
+    margin: 0 auto;
+}
+
+input.orderButton {
+    width: 240px;
+    background-color: #2d5a27;
+    color: #ffffff;
+    border: 0;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input.orderButton:hover {
+    background-color: #1c3823;
+}
+
+/* כפתור מנוטרל */
+input.orderButton:disabled {
+    background-color: #9eaf9e;
+    cursor: not-allowed;
+}
+
+p.hint {
+    font-size: 14px;
+    color: #555555;
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* תצוגת הצמח */
+div.plantBox {
+    text-align: center;
+    height: 330px;
+}
+
+#defaultShelvesView img {
+    height: 270px;
+    width: auto;
+}
+
+/* מצב התחלתי: תוצאת הצמח מוסתרת עד שנבחרו שלושת סטי הרדיו */
+#plantResultContainer {
+    display: none;
+}
+
+#plantResultContainer h2 {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+
+#plantResultContainer img {
+    width: 230px;
+    height: auto;
+}
+
+/* תמונות התוספות */
+div.extrasBox {
+    background-color: #ffffff;
+    border: 2px solid #2d5a27;
+    margin-top: 10px;
+}
+
+div.extrasBox h2 {
+    background-color: #2d5a27;
+    color: #ffffff;
+    font-size: 15px;
+    margin: 0;
+    padding: 6px 12px;
+}
+
+div.extrasBox figure {
+    display: inline-block;
+    width: 66px;
+    margin: 10px 3px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* מצב התחלתי: שקיפות חלקית. JavaScript משנה ל-1 כשהתיבה מסומנת, והמעבר הדרגתי */
+img.extraImg {
+    width: 64px;
+    height: 64px;
+    opacity: 0.35;
+    transition: opacity 0.3s;
+}
+
+/* חלון הסיכום: רקע כהה על כל המסך, מוסתר עד הלחיצה על הכפתור */
+#summaryModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+div.modalContent {
+    width: 400px;
+    margin: 120px auto 0 auto;
+    background-color: #f7f4ec;
+    border: 4px solid #2d5a27;
+    padding: 25px 30px;
+    text-align: center;
+}
+
+div.modalContent h2 {
+    margin-top: 0;
+}
+
+#summaryText {
+    text-align: right;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+/* ---------- התאמה למסכים קטנים ---------- */
+
+/* במסכים צרים מוסתרת תמונת המדפים בדף הבית */
+@media screen and (max-width: 800px) {
+    section.intro img {
+        display: none;
+    }
+}
